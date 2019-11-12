@@ -15,13 +15,15 @@ async function getInformation() {
 async function filterStringLength() {
   const data = await getInformation();
   textOutput.innerHTML = "";
+  let count = 0;
   data.data.forEach(el => {
-    let arr = el.split(" ");
-    arr.forEach(element => {
-      if (element.length > textInput.value) {
-        textOutput.innerHTML = textOutput.innerHTML + ", " + element;
+    if (el.length > textInput.value) {
+      if (count === 0) {
+        textOutput.innerHTML = el;
       }
-    });
+      count++;
+      textOutput.innerHTML = textOutput.innerHTML + ", " + el;
+    }
   });
 }
 
@@ -31,10 +33,10 @@ async function filterSubstring() {
   let count = 0;
   data.data.forEach(el => {
     if (el.includes(textInput.value)) {
-      if(count === 0) {
-        textOutput.innerHTML = el
+      if (count === 0) {
+        textOutput.innerHTML = el;
       }
-      count++
+      count++;
       textOutput.innerHTML = textOutput.innerHTML + ",  " + el;
     }
   });
@@ -46,10 +48,10 @@ async function filterSubstringRegister() {
   let count = 0;
   data.data.forEach(el => {
     if (el.toLowerCase().includes(textInput.value.toLowerCase())) {
-      if(count === 0) {
-        textOutput.innerHTML = el
+      if (count === 0) {
+        textOutput.innerHTML = el;
       }
-      count++
+      count++;
       textOutput.innerHTML = textOutput.innerHTML + ", " + el;
     }
   });
