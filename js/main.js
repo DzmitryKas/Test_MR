@@ -20,12 +20,10 @@ async function filterStringLength() {
     if (el.length > textInput.value) {
       if (count === 0) {
         textOutput.innerHTML = el;
-      }
-      else {
+      } else {
         textOutput.innerHTML = textOutput.innerHTML + ", " + el;
       }
       count++;
-      
     }
   });
 }
@@ -38,12 +36,10 @@ async function filterSubstring() {
     if (el.includes(textInput.value)) {
       if (count === 0) {
         textOutput.innerHTML = el;
-      }
-      else {
+      } else {
         textOutput.innerHTML = textOutput.innerHTML + ",  " + el;
       }
       count++;
-      
     }
   });
 }
@@ -56,12 +52,10 @@ async function filterSubstringRegister() {
     if (el.toLowerCase().includes(textInput.value.toLowerCase())) {
       if (count === 0) {
         textOutput.innerHTML = el;
-      }
-      else {
+      } else {
         textOutput.innerHTML = textOutput.innerHTML + ", " + el;
       }
       count++;
-      
     }
   });
 }
