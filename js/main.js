@@ -19,7 +19,7 @@ async function filterStringLength() {
     let arr = el.split(" ");
     arr.forEach(element => {
       if (element.length > textInput.value) {
-        textOutput.innerHTML = textOutput.innerHTML + "  " + element;
+        textOutput.innerHTML = textOutput.innerHTML + ", " + element;
       }
     });
   });
@@ -28,26 +28,30 @@ async function filterStringLength() {
 async function filterSubstring() {
   const data = await getInformation();
   textOutput.innerHTML = "";
+  let count = 0;
   data.data.forEach(el => {
-    let arr = el.split(" ");
-    arr.forEach(element => {
-      if (element.includes(textInput.value)) {
-        textOutput.innerHTML = textOutput.innerHTML + "  " + element;
+    if (el.includes(textInput.value)) {
+      if(count === 0) {
+        textOutput.innerHTML = el
       }
-    });
+      count++
+      textOutput.innerHTML = textOutput.innerHTML + ",  " + el;
+    }
   });
 }
 
 async function filterSubstringRegister() {
   const data = await getInformation();
   textOutput.innerHTML = "";
+  let count = 0;
   data.data.forEach(el => {
-    let arr = el.split(" ");
-    arr.forEach(element => {
-      if (element.toLowerCase().includes(textInput.value.toLowerCase())) {
-        textOutput.innerHTML = textOutput.innerHTML + "  " + element;
+    if (el.toLowerCase().includes(textInput.value.toLowerCase())) {
+      if(count === 0) {
+        textOutput.innerHTML = el
       }
-    });
+      count++
+      textOutput.innerHTML = textOutput.innerHTML + ", " + el;
+    }
   });
 }
 
