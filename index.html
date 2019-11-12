@@ -5,11 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Test_MR</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <input type="text">
-  <button class="filtr-length-word"></button>
-  <button class="filtr-word"></button>
+  <input type="text" class="input-text">
+  <div class="wrapper-button">
+    <button class="filter-length-word">Фильтр по длине слова</button>
+    <button class="filter-word">Фильтр по подстроке</button>
+  </div>  
+  <p class="p-checkbox"><label><input type="checkbox" name="sortament" class="checkbox"/> 
+    <span>С учетом регистра</span></label></p>
   <p class="output-text"></p>
+  <script src="./js/main.js"></script>
 </body>
 </html>

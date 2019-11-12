@@ -1,0 +1,12 @@
+.input-text, .wrapper-button, .p-checkbox {
+  display: block;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.output-text {
+  display: block;
+  text-align: center;
+  padding: 100px;
+  border: 1px solid black;
+}
