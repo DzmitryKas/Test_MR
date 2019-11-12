@@ -21,8 +21,11 @@ async function filterStringLength() {
       if (count === 0) {
         textOutput.innerHTML = el;
       }
+      else {
+        textOutput.innerHTML = textOutput.innerHTML + ", " + el;
+      }
       count++;
-      textOutput.innerHTML = textOutput.innerHTML + ", " + el;
+      
     }
   });
 }
@@ -36,8 +39,11 @@ async function filterSubstring() {
       if (count === 0) {
         textOutput.innerHTML = el;
       }
+      else {
+        textOutput.innerHTML = textOutput.innerHTML + ",  " + el;
+      }
       count++;
-      textOutput.innerHTML = textOutput.innerHTML + ",  " + el;
+      
     }
   });
 }
@@ -51,8 +57,11 @@ async function filterSubstringRegister() {
       if (count === 0) {
         textOutput.innerHTML = el;
       }
+      else {
+        textOutput.innerHTML = textOutput.innerHTML + ", " + el;
+      }
       count++;
-      textOutput.innerHTML = textOutput.innerHTML + ", " + el;
+      
     }
   });
 }
